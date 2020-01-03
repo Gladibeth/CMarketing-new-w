@@ -6,6 +6,13 @@ $(function () {
   })
 })
 
+$(function () {
+  'use strict'
+
+  $('.nav-link__mobile').on('click', function () {
+    $('.offcanvas-collapse').removeClass('open')
+  })
+})
 
 
 
