@@ -1877,6 +1877,13 @@ select option{
   .nav-link--btn{
     border: none;
   }
+  .main-footer__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 
 }
 
