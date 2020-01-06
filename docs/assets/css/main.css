@@ -847,7 +847,10 @@ button:focus {
   display: flex;
   justify-content: flex-start;
 }
-
+.main-general__title.main-general__title--team p{
+  color: #e5c8aa;
+  font-size: 55px;
+}
 .main-general__title p {
   font-size:40px;
   font-weight: 700;
@@ -860,6 +863,7 @@ button:focus {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+  
   .main-general__title p {
     font-size: 40px;
   }
@@ -949,7 +953,7 @@ button:focus {
 .nav-pills .show > .nav-link {
   color: #ff8920;
   background-color: transparent;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   transition: 0.3s ease-in-out;
   padding: 10px 35px;
 }
@@ -1041,7 +1045,7 @@ input[type="text"]:focus,
   background: transparent;
   border-color: transparent !important;
   outline: 0;
-  border-bottom: 1px solid #ff8920;
+  border-bottom: 1px solid #ff8920 !important;
   box-shadow: 0 0 0 0.2rem transparent !important;
   
 }
@@ -1262,6 +1266,11 @@ select option{
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   border-color: transparent;
+  border: none;
+}
+
+.nav-tabs .nav-link:focus{
+  border: none;
 }
 
 .main-methodology{
@@ -1318,14 +1327,19 @@ select option{
 }
 
 .main-clients__content{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
-
+.main-clients__item{
+  width: 25%;
+}
 .main-clients__img{
   width: 100%;
   height: 100%;
+  padding: 20px;
   /* height: 200px; */
 }
 
@@ -1534,6 +1548,7 @@ select option{
   color: #fff;
   font-size: 30px;
   text-align: center;
+  line-height: 1.3;
 }
 
 .main-footer{
@@ -1623,24 +1638,33 @@ select option{
 
 .main-projects__maskimg{
   width: 100%;
-
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .main-projects__maskimg img{
   width: 100%;
-  
+}
+
+.main-projects__boximg{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-projects__item{
   padding: 0 20px;
 }
 .main-projects__img{
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 400px;
 }
 
 .main-projects__img img{
   width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 
@@ -1675,6 +1699,166 @@ select option{
 
 .main-projects__content .slick-dots li button:hover:before, .main-projects__content .slick-dots li button:focus:before {
   color: #ecad2d;
+}
+
+
+.main-team{
+  padding-bottom: 100px;
+  background-color: #f1ebe6;
+}
+
+.main-team__content{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.tab-content__team{
+  background-color: #ff8920;
+  color:#fff;
+  padding: 30px;
+  min-height: 400px;
+  position: relative;
+}
+
+.main-team__img {
+  width: 400px;
+  height: 400px;
+}
+
+.main-team__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.main-team__boxitem{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.main-team__boximg{
+  width: 7rem;
+  height: 8rem;
+}
+
+.nav-link_team{
+  position: relative;
+}
+.nav-link_team.active .main-team__title p{
+  color: #ff8920;
+}
+
+.nav-link_team.active .main-team__title-diseño:before,.nav-link_team.active .main-team__title-marketing:before,.nav-link_team.active .main-team__title-desarrollo:before{
+  background-color: #ff8920;
+}
+
+.main-team__title.main-team__title-diseño{
+  position: absolute;
+  left:50%;
+  bottom:150px;
+}
+
+.main-team__title-diseño:before{
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: #252e3a;
+  top: 25px;
+  left: 25px;
+}
+
+.main-team__title.main-team__title-marketing{
+  position: absolute;
+  top: 20px;
+  right: -110px;
+}
+
+.main-team__title.main-team__title-marketing p,.main-team__title.main-team__title-desarrollo p,.main-team__title.main-team__title-diseño p{
+  color: #252e3a;
+}
+.main-team__title-marketing:before{
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 1px;
+  background-color: #252e3a;
+  top: 15px;
+  left: -60px;
+}
+
+
+
+.main-team__title.main-team__title-desarrollo{
+  position: absolute;
+  right: 20%;
+}
+.main-team__title-desarrollo:before{
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 100px;
+  background-color: #252e3a;
+  top: -100px;
+  left: 50%;
+}
+
+
+
+
+
+
+.main-team__boximg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-team__boxteam{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.main-team__boxtext p{
+  margin-bottom: 0;
+}
+
+.ul_position{
+  position: relative;
+}
+
+.position1{
+  position: absolute;
+  left: -135px;
+}
+
+.position2{
+  position: absolute;
+  left: 40%;
+}
+.main-team__img.main-team__img1{
+  height: 400px;
+  width: 50px;
+}
+
+
+.position3{
+  position: absolute;
+  left: 35%;
+  top: 100px;
+}
+.main-team__img.main-team__img2{
+  width: 200px;
+  height: 200px;
+}
+
+.main-team__boxtext p{
+  font-weight: 600;
+  font-size: 18px;
+}
+.main-team__boxtext span{
+  font-size: 15px;
+  color: #252e3a;
 }
 
 
@@ -1799,11 +1983,9 @@ select option{
     width: 100%;
     height: auto !important;
   }
-  .btn--large{
-    font-size: 14px;
-  }
   .main-general__title p{
     line-height: 1;
+    text-align: center;
   }
   .main-methodology__contentbox{
     grid-template-columns: 100%;
@@ -1850,6 +2032,7 @@ select option{
   }
   .main-clients__img{
     height: 100px;
+    padding: 10px;
   }
   .main-footer__info ul li {
     margin-bottom: 10px;
@@ -1885,6 +2068,95 @@ select option{
     height: 100%;
   }
 
+  .main-team__content{
+    grid-template-columns: 1fr;
+  }
+  .main-team__boxteam{
+    grid-template-columns: 1fr;
+  }
+  .main-team__boxitem{
+    grid-template-columns: 45% 55%;
+  }
+
+  .main-team__item:nth-child(1){
+    margin-bottom: 70px;
+  }
+
+  .main-team__title p{
+    font-size: 15px;
+  }
+  .position1{
+    position: absolute;
+    left: -35px;
+    top: -100px;
+  }
+  .position2{
+    left: 70px;
+    top: -99px;
+  }
+  .position3{
+    left: 70px;
+    top: -45px;
+  }
+  .main-team__img{
+    width: 150px;
+    height: 150px;
+  }
+  .main-team__img.main-team__img1{
+    height: 150px;
+    width: 50px;
+  }
+  .main-team__img.main-team__img2{
+    width: 50px;
+    height: 50px;
+  }
+
+  .main-team__title.main-team__title-desarrollo{
+    right: -170%;
+    top: 20px;
+  }
+  .main-team__title-desarrollo:before{
+    left: -55px;
+    width: 50px;
+    height: 1px;
+    top: 10px;
+  }
+  .main-team__title-diseño:before{
+    width: 130px;
+    height: 1px;
+    top: 13px;
+    left: -140px;
+  }
+  .main-team__title.main-team__title-diseño{
+    bottom: 25px;
+    left: 235px !important;
+  }
+  .main-clients__item{
+    width: 50%
+  }
+  .main-team{
+    padding-top: 110px;
+  }
+  .tab-content__team{
+    padding: 15px;
+  }
+  .main-contact__text p{
+    text-align: center
+  }
+  .main-contact__description p{
+    text-align: center
+  }
+  .nav-link--btn{
+    color: #ff8920 !important;
+  }
+  .btn--large{
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+  .main-testimonials__quates{
+    width: 75px;
+    height: 75px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1934,6 +2206,40 @@ select option{
   .nav-link--btn{
     border: none;
   }
+
+  .position2{
+    left: 45%;
+  }
+  .main-team__title.main-team__title-diseño{
+    bottom: 160px;
+  }
+  .main-team__title.main-team__title-marketing{
+    right: -115px;
+  }
+  .main-team__title-marketing:before{
+    width: 30px;
+    left: -40px;
+  }
+
+  .main-team__title.main-team__title-desarrollo{
+    right: 14%;
+  }
+  .main-team__content{
+    grid-template-columns: 55% 45%;
+  }
+
+  .main-team__boxteam{
+    grid-template-columns: 1fr;
+  }
+  .main-team__boxitem{
+    grid-template-columns: 45% 55%;
+  }
+  .main-clients__item{
+    width: 33.3%
+  }
+  .main-general__title.main-general__title--team p{
+    font-size: 34px;
+  }
 }
 
 
@@ -1948,5 +2254,31 @@ select option{
   .main-testimonials__boxcontent{
     grid-template-columns: 1fr 1fr 1fr 1fr; 
   }  
-  
+  .main-team__boxitem{
+    grid-template-columns: 45% 55%;
+  }
+  .position2{
+    left: 46%;
+  }
+  .main-team__title.main-team__title-diseño{
+    bottom: 160px;
+  }
+  .main-team__title-marketing:before{
+    left: -55px;
+  }
+  .main-team__title.main-team__title-desarrollo{
+    right: 10%;
+  }
+  .main-team__title p{
+    font-size: 15px;
+  }
+  .nav-link{
+    font-size: 15px;
+  }
+  .nav-link--btn{
+    font-size: 15px;
+  }
+  .main-tetsimonials__dates{
+    left: -65%;
+  }
 }

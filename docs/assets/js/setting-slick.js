@@ -38,7 +38,7 @@ $('.main-banner__content').slick({
 $('.main-projects__content').slick({
   infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 3,
   dots: true,
   arrows: true,
   responsive: [{
