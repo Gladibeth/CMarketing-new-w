@@ -1956,6 +1956,9 @@ select option{
   bottom: 0;
   left: -50%;
 }
+.main-tetsimonials__dates p{
+  margin-bottom: 0;
+}
 
 
 
