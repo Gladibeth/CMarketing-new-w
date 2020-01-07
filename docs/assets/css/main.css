@@ -233,6 +233,9 @@ body {
   display: inline-block;
   position: relative;
 }
+.hamburger-box:focus{
+  outline: none;
+}
 
 .hamburger-inner {
   display: block;
@@ -2246,6 +2249,15 @@ select option{
   .main-testimonials__boxcontent{
     padding-left: 15px;
   }
+  .main-projects__content--grid{
+    grid-template-columns: 1fr;
+  }
+  .nav-link--projects{
+    font-size: 13px;
+  }
+  .main-projects .nav-item{
+    padding: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2328,6 +2340,9 @@ select option{
   }
   .main-general__title.main-general__title--team p{
     font-size: 34px;
+  }
+  .main-projects__content--grid{
+    grid-template-columns: 1fr 1fr;
   }
 }
 
