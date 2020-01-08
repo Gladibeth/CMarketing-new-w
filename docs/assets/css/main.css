@@ -2258,6 +2258,15 @@ select option{
   .main-projects .nav-item{
     padding: 0;
   }
+  .main-methodology{
+    background-image: none;
+  }
+  .main-methodology__box{
+    box-shadow: none;
+  }
+  .main-methodology__item:nth-child(2){
+    margin-top: 0px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2344,11 +2353,17 @@ select option{
   .main-projects__content--grid{
     grid-template-columns: 1fr 1fr;
   }
+  .main-projects__content--grid{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .main-projects__content--grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .nav-item{
     padding: 0;
   }
