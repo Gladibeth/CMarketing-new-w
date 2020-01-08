@@ -1896,7 +1896,7 @@ select option{
 .main-team__boxteam{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 25px;
 }
 
 .main-team__boxtext p{
